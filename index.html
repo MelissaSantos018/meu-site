@@ -1,0 +1,61 @@
+!DOCTYPE html
+html lang=pt-br
+head
+  meta charset=UTF-8 
+  meta name=viewport content=width=device-width, initial-scale=1.0
+  titleMeu Portfóliotitle
+  link rel=stylesheet href=style.css 
+head
+body
+  header
+    h1Melissa dos Santosh1
+    pDesenvolvedora Front-End Criativap
+  header
+
+  nav class=tabs
+    button class=tab-button active onclick=showTab('sobre')Sobre Mimbutton
+    button class=tab-button onclick=showTab('projetos')Projetosbutton
+    button class=tab-button onclick=showTab('habilidades')Habilidadesbutton
+    button class=tab-button onclick=showTab('contato')Contatobutton
+  nav
+
+  main
+    section id=sobre class=tab-content active
+      h2Sobre Mimh2
+      pSou uma desenvolvedora apaixonada por transformar ideias em interfaces criativas. Ainda estou desenvolvendo meus projetos, mas já estou organizando meu espaço com carinho e dedicação.p
+    section
+
+    section id=projetos class=tab-content
+      h2Projetosh2
+      pEm breve você encontrará aqui meus projetos mais legais. Fique de olho!p
+    section
+
+    section id=habilidades class=tab-content
+      h2Habilidadesh2
+      ul
+        liHTML5 & CSS3li
+        liJavaScript (básico)li
+        liDesign Responsivoli
+        liOrganização & Criatividadeli
+      ul
+    section
+
+    section id=contato class=tab-content
+      h2Contatoh2
+      pEmail melissa@email.comp
+      pLinkedIn linkedin.cominmelissap
+    section
+  main
+
+  script
+    function showTab(tabId) {
+      const contents = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+      contents.forEach(c = c.classList.remove('active'));
+      buttons.forEach(b = b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  script
+body
+html
