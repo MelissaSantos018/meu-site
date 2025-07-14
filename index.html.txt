@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Melissa dos Santos</h1>
+    <p>Desenvolvedora Front-End Criativa</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-button active" onclick="showTab('sobre')">Sobre Mim</button>
+    <button class="tab-button" onclick="showTab('projetos')">Projetos</button>
+    <button class="tab-button" onclick="showTab('habilidades')">Habilidades</button>
+    <button class="tab-button" onclick="showTab('contato')">Contato</button>
+  </nav>
+
+  <main>
+    <section id="sobre" class="tab-content active">
+      <h2>Sobre Mim</h2>
+      <p>Sou uma desenvolvedora apaixonada por transformar ideias em interfaces criativas. Ainda estou desenvolvendo meus projetos, mas já estou organizando meu espaço com carinho e dedicação.</p>
+    </section>
+
+    <section id="projetos" class="tab-content">
+      <h2>Projetos</h2>
+      <p>Em breve você encontrará aqui meus projetos mais legais. Fique de olho!</p>
+    </section>
+
+    <section id="habilidades" class="tab-content">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>HTML5 & CSS3</li>
+        <li>JavaScript (básico)</li>
+        <li>Design Responsivo</li>
+        <li>Organização & Criatividade</li>
+      </ul>
+    </section>
+
+    <section id="contato" class="tab-content">
+      <h2>Contato</h2>
+      <p>Email: melissa@email.com</p>
+      <p>LinkedIn: linkedin.com/in/melissa</p>
+    </section>
+  </main>
+
+  <script>
+    function showTab(tabId) {
+      const contents = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+      contents.forEach(c => c.classList.remove('active'));
+      buttons.forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
